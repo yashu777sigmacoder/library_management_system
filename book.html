@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title"> Book Management</h1>
+
+        
+        <form action="AddBookServlet" method="post" style="margin-bottom:22px;">
+            <h3 style="margin-bottom:12px;">Add New Book</h3>
+            <div class="form-row">
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text" placeholder="Enter book title" required>
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input id="author" name="author" type="text" placeholder="Author name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="publisher">Publisher</label>
+                    <input id="publisher" name="publisher" type="text" placeholder="Publisher (optional)">
+                </div>
+                <div>
+                    <label for="year">Year</label>
+                    <input id="year" name="year" type="number" min="1000" max="2099" placeholder="2023">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Add Book</button>
+                <a href="index.html" class="btn secondary"
+                    style="display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;text-decoration:none;">Back</a>
+            </div>
+        </form>
+
+        <hr style="border:none;height:1px;background:#f1f5f9;margin:18px 0;">
+
+        <!-- Delete Book -->
+        <form action="DeleteBookServlet" method="post">
+            <h3 style="margin-bottom:12px;">Delete Book</h3>
+            <div class="form-row">
+                <div class="full">
+                    <label for="delBookId">Book ID</label>
+                    <input id="delBookId" name="bookId" type="number" placeholder="Enter Book ID to delete" required>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Delete Book</button>
+                <button type="reset" class="btn secondary">Reset</button>
+            </div>
+            <p class="small" style="margin-top:10px;"></p>
+        </form>
+    </div>
+</body>
+
+</html>

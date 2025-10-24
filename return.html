@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Return Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title"> Return Book</h1>
+
+    <form action="ReturnBookServlet" method="post">
+      <div class="form-row">
+        <div>
+          <label for="retIssueId">Issue ID (if known)</label>
+          <input id="retIssueId" name="issueId" type="number" placeholder="Issue ID (preferred)">
+        </div>
+        <div>
+          <label for="retBookId">Book ID</label>
+          <input id="retBookId" name="bookId" type="number" placeholder="Book ID" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="retStudentId">Student ID</label>
+          <input id="retStudentId" name="studentId" type="number" placeholder="Student ID" required>
+        </div>
+        <div>
+          <label for="retDate">Return Date</label>
+          <input id="retDate" name="returnDate" type="date" required>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Return Book</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+
+      <p class="small" style="margin-top:10px;"></p> <!-- not needed -->
+    </form>
+
+  </div>
+</body>
+</html>

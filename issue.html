@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Issue Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title">Issue Book</h1>
+
+    <form action="IssueBookServlet" method="post">
+      <div class="form-row">
+        <div>
+          <label for="issueBookId">Book ID</label>
+          <input id="issueBookId" name="bookId" type="number" placeholder="Book ID" required>
+        </div>
+        <div>
+          <label for="issueStudentId">Student ID</label>
+          <input id="issueStudentId" name="studentId" type="number" placeholder="Student ID" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="issueDate">Issue Date</label>
+          <input id="issueDate" name="issueDate" type="date" required>
+        </div>
+        <div>
+          <label for="dueDate">Due Date</label>
+          <input id="dueDate" name="dueDate" type="date" required>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Issue Book</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+      <p class="small" style="margin-top:10px;"></p>
+    </form>
+
+  </div>
+</body>
+</html>

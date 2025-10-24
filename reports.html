@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Search & Reports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title"> Search and Reports</h1>
+
+    
+    <form action="SearchServlet" method="get" style="margin-bottom:18px;">
+      <h3 style="margin-bottom:12px;">Quick Search</h3>
+      <div class="form-row">
+        <div>
+          <label for="q">Keyword (title/author)</label>
+          <input id="q" name="q" type="text" placeholder="Type title or author..." required>
+        </div>
+        <div>
+          <label for="type">Filter</label>
+          <select id="type" name="filter">
+            <option value="">All</option>
+            <option value="available">Available</option>
+            <option value="issued">Issued</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Search</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+    </form>
+
+    <hr style="border:none;height:1px;background:#f1f5f9;margin:18px 0;">
+
+    <!-- Report -->
+    <form action="ReportsServlet" method="get">
+      <h3 style="margin-bottom:12px;">Generate Reports</h3>
+
+      <div class="form-row">
+        <div>
+          <label for="rtype">Report Type</label>
+          <select id="rtype" name="reportType" required>
+            <option value="">Select report</option>
+            <option value="available_books">Available Books</option>
+            <option value="issued_books">Issued Books</option>
+            <option value="student_issues">Books issued to a Student</option>
+            <option value="overdue">Overdue Returns</option>
+          </select>
+        </div>
+        <div>
+          <label for="param">Parameter (if needed)</label>
+          <input id="param" name="param" type="text" placeholder="e.g. Student ID for student_issues">
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Generate</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+
+      <p class="small" style="margin-top:10px;"></p>
+    </form>
+
+  </div>
+</body>
+</html>

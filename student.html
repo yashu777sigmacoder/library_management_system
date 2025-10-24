@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title"> Student Management</h1>
+
+    <!-- Register Student -->
+    <form action="RegisterStudentServlet" method="post" style="margin-bottom:22px;">
+      <h3 style="margin-bottom:12px;">Register New Student</h3>
+
+      <div class="form-row">
+        <div>
+          <label for="stuName">Name</label>
+          <input id="stuName" name="name" type="text" placeholder="Full name" required>
+        </div>
+        <div>
+          <label for="stuDept">Department</label>
+          <input id="stuDept" name="department" type="text" placeholder="CSE / ECE / etc." required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="stuYear">Year</label>
+          <select id="stuYear" name="year" required>
+            <option value="">Select year</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+          </select>
+        </div>
+        <div>
+          <label for="stuEmail">Email</label>
+          <input id="stuEmail" name="email" type="email" placeholder="student@college.edu" required>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Register Student</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+    </form>
+
+    <hr style="border:none;height:1px;background:#f1f5f9;margin:18px 0;">
+
+    
+    <form action="DeleteStudentServlet" method="post">
+      <h3 style="margin-bottom:12px;">Delete Student</h3>
+      <div class="form-row full">
+        <label for="delStuId">Student ID</label>
+        <input id="delStuId" name="studentId" type="number" placeholder="Enter Student ID to delete" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Delete Student</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+      <p class="small" style="margin-top:10px;">(Deletion will remove student record; issued-book constraint should be handled by backend.)</p>
+    </form>
+
+  </div>
+</body>
+</html>
+<!-- Delete is removing student record but issued-book what to do!  -->
